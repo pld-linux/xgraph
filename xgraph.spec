@@ -3,7 +3,7 @@ Summary(pl):	XGraph z obs³ug± animacji
 Name:		xgraph
 Version:	11.4
 Release:	1
-License:	GPL
+License:	UC Berkeley
 Group:		Applications/Math
 URL:		http://jean-luc.ncsa.uiuc.edu/Codes/xgraph/
 Source0:	http://jean-luc.ncsa.uiuc.edu/Codes/xgraph/xgraph_bin/%{name}_anim.tar.gz
