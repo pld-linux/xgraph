@@ -1,0 +1,11 @@
+--- Makefile.am~	1999-12-16 00:30:09.000000000 +0100
++++ Makefile.am	2004-08-13 19:06:50.000000000 +0200
+@@ -21,7 +21,7 @@
+ 		xtb.h
+ xgraph_SOURCES = $(xgraph_c_sources)
+ 
+-man_MANS = xgraph.man
++man_MANS = xgraph.1
+ 
+ EXTRA_DIST=\
+ 	$(man_MANS) \
