@@ -2,7 +2,7 @@ Summary:	XGraph with animation
 Summary(pl):	XGraph z obs³ug± animacji
 Name:		xgraph
 Version:	12.1
-Release:	1
+Release:	2
 License:	BSD
 Group:		Applications/Math
 URL:		http://www.isi.edu/nsnam/xgraph/
