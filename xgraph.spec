@@ -2,7 +2,7 @@ Summary:	XGraph with animation
 Summary(pl):	XGraph z obs³ug± animacji
 Name:		xgraph
 Version:	11.4
-Release:	1
+Release:	2
 License:	BSD
 Group:		Applications/Math
 URL:		http://jean-luc.ncsa.uiuc.edu/Codes/xgraph/
@@ -11,9 +11,6 @@ Source0:	http://jean-luc.ncsa.uiuc.edu/Codes/xgraph/xgraph_bin/%{name}_anim.tar.
 Patch0:		%{name}-Makefile.patch
 Patch1:		%{name}-header.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
-
-%define         _prefix         /usr/X11R6
-%define         _mandir         %{_prefix}/man
 
 %description
 XGraph with animation is a modification of the popular XGraph plotting
@@ -37,9 +34,7 @@ kawa³ki wykresu myszk± i numerycznie ró¿niczkowaæ dane na wykresie.
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_bindir}
-install -d $RPM_BUILD_ROOT%{_mandir}/man1
-install -d $RPM_BUILD_ROOT%{_examplesdir}/xgraph
+install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_examplesdir}/xgraph}
 install xgraph $RPM_BUILD_ROOT%{_bindir}/xgraph
 install xgraph.man $RPM_BUILD_ROOT%{_mandir}/man1/xgraph.1
 install examples/* $RPM_BUILD_ROOT%{_examplesdir}/xgraph/
@@ -49,8 +44,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
+%doc README.NEWFEATURES
 %attr(755,root,root)%{_bindir}/*
 %{_mandir}/man1/*
-%dir %{_examplesdir}/xgraph
-%{_examplesdir}/xgraph/*
-%doc README.NEWFEATURES
+%{_examplesdir}/xgraph
