@@ -45,7 +45,6 @@ install examples/* $RPM_BUILD_ROOT%{_examplesdir}/xgraph/
 
 %clean
 rm -rf $RPM_BUILD_ROOT
-gzip -9nf README.NEWFEATURES
 
 %files
 %defattr(644,root,root,755)
@@ -53,4 +52,4 @@ gzip -9nf README.NEWFEATURES
 %{_mandir}/man1/*
 %dir %{_examplesdir}/xgraph
 %{_examplesdir}/xgraph/*
-%doc *.gz
+%doc README.NEWFEATURES
