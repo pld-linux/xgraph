@@ -1,15 +1,17 @@
 Summary:	XGraph with animation
 Summary(pl):	XGraph z obs³ug± animacji
 Name:		xgraph
-Version:	11.4
-Release:	2
+Version:	12.1
+Release:	1
 License:	BSD
 Group:		Applications/Math
-URL:		http://jean-luc.ncsa.uiuc.edu/Codes/xgraph/
-Source0:	http://jean-luc.ncsa.uiuc.edu/Codes/xgraph/xgraph_bin/%{name}_anim.tar.gz
-# Source0-md5:	efd5b689db8824376ab33c0fa33e30da
-Patch0:		%{name}-Makefile.patch
-Patch1:		%{name}-header.patch
+URL:		http://www.isi.edu/nsnam/xgraph/
+Source0:	http://www.isi.edu/nsnam/dist/%{name}-%{version}.tar.gz
+# Source0-md5:	c4cbfb3291a607dd274e7fb161b9056a
+Patch0:		%{name}-manlocation.patch
+BuildRequires:	autoconf
+BuildRequires:	automake
+BuildRequires:	XFree86-devel
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
@@ -25,19 +27,23 @@ Berkeley. Mo¿na w nim robiæ animacje zestawów danych, powiêkszaæ
 kawa³ki wykresu myszk± i numerycznie ró¿niczkowaæ dane na wykresie.
 
 %prep
-%setup -q -n xgraph
-%patch0 -p1
-%patch1 -p1
+%setup -q
+%patch0
+mv %{name}.man %{name}.1
 
 %build
+%{__aclocal}
+%{__autoconf}
+%{__automake}
+%configure
 %{__make}
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_examplesdir}/xgraph}
+install -d $RPM_BUILD_ROOT%{_examplesdir}/xgraph/
+%{__make} install \
+	DESTDIR=$RPM_BUILD_ROOT
 
-install xgraph $RPM_BUILD_ROOT%{_bindir}/xgraph
-install xgraph.man $RPM_BUILD_ROOT%{_mandir}/man1/xgraph.1
 install examples/* $RPM_BUILD_ROOT%{_examplesdir}/xgraph/
 
 %clean
@@ -45,7 +51,7 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc README.NEWFEATURES
+%doc README*
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
 %{_examplesdir}/xgraph
