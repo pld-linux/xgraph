@@ -35,6 +35,7 @@ kawa³ki wykresu myszk± i numerycznie ró¿niczkowaæ dane na wykresie.
 %install
 rm -rf $RPM_BUILD_ROOT
 install -d $RPM_BUILD_ROOT{%{_bindir},%{_mandir}/man1,%{_examplesdir}/xgraph}
+
 install xgraph $RPM_BUILD_ROOT%{_bindir}/xgraph
 install xgraph.man $RPM_BUILD_ROOT%{_mandir}/man1/xgraph.1
 install examples/* $RPM_BUILD_ROOT%{_examplesdir}/xgraph/
@@ -45,6 +46,6 @@ rm -rf $RPM_BUILD_ROOT
 %files
 %defattr(644,root,root,755)
 %doc README.NEWFEATURES
-%attr(755,root,root)%{_bindir}/*
+%attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*
 %{_examplesdir}/xgraph
