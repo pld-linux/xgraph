@@ -1,0 +1,45 @@
+--- xgraph-11/Makefile	Tue Feb 21 22:38:28 1995
++++ xgraph-11/Makefile.patch	Mon Mar 18 15:13:46 2002
+@@ -135,9 +135,9 @@
+ # X Window System make variables; this need to be coordinated with rules
+ 
+           PATHSEP = /
+-        USRLIBDIR = /usr/local/X11R5/lib
+-           BINDIR = /usr/local/X11R5/bin
+-          INCROOT = /usr/local/X11R5/include
++        USRLIBDIR = /usr/X11R6/lib
++           BINDIR = /usr/X11R6/bin
++          INCROOT = /usr/X11R6/include
+      BUILDINCROOT = $(TOP)
+       BUILDINCDIR = $(BUILDINCROOT)/X11
+       BUILDINCTOP = ..
+@@ -151,7 +151,7 @@
+          XINITDIR = $(LIBDIR)/xinit
+            XDMDIR = $(LIBDIR)/xdm
+            TWMDIR = $(LIBDIR)/twm
+-          MANPATH = /usr/local/X11R5/man
++          MANPATH = /usr/X11R6/man
+     MANSOURCEPATH = $(MANPATH)/man
+         MANSUFFIX = n
+      LIBMANSUFFIX = 3
+@@ -217,17 +217,17 @@
+           DEPXLIB = $(DEPEXTENSIONLIB)
+              XLIB = $(EXTENSIONLIB) -lX11
+ 
+-        DEPXMULIB = $(USRLIBDIR)/libXmu.sa.$(SOXMUREV)
++        DEPXMULIB = $(USRLIBDIR)/libXmu.so
+        XMULIBONLY = -lXmu
+            XMULIB = -lXmu
+ 
+        DEPOLDXLIB =
+           OLDXLIB = -loldX
+ 
+-      DEPXTOOLLIB = $(USRLIBDIR)/libXt.sa.$(SOXTREV)
++      DEPXTOOLLIB = $(USRLIBDIR)/libXt.so
+          XTOOLLIB = -lXt
+ 
+-        DEPXAWLIB = $(USRLIBDIR)/libXaw.sa.$(SOXAWREV)
++        DEPXAWLIB = $(USRLIBDIR)/libXaw.so
+            XAWLIB = -lXaw
+ 
+         DEPXILIB =
