@@ -7,6 +7,7 @@ License:	BSD
 Group:		Applications/Math
 URL:		http://jean-luc.ncsa.uiuc.edu/Codes/xgraph/
 Source0:	http://jean-luc.ncsa.uiuc.edu/Codes/xgraph/xgraph_bin/%{name}_anim.tar.gz
+# Source0-md5:	efd5b689db8824376ab33c0fa33e30da
 Patch0:		%{name}-Makefile.patch
 Patch1:		%{name}-header.patch
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
