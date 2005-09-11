@@ -40,11 +40,12 @@ mv %{name}.man %{name}.1
 
 %install
 rm -rf $RPM_BUILD_ROOT
-install -d $RPM_BUILD_ROOT%{_examplesdir}/xgraph/
+install -d $RPM_BUILD_ROOT%{_examplesdir}/xgraph
+
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-install examples/* $RPM_BUILD_ROOT%{_examplesdir}/xgraph/
+install examples/* $RPM_BUILD_ROOT%{_examplesdir}/xgraph
 
 %clean
 rm -rf $RPM_BUILD_ROOT
