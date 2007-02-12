@@ -1,5 +1,5 @@
 Summary:	XGraph with animation
-Summary(pl.UTF-8):   XGraph z obsługą animacji
+Summary(pl.UTF-8):	XGraph z obsługą animacji
 Name:		xgraph
 Version:	12.1
 Release:	2
