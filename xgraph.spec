@@ -1,5 +1,5 @@
 Summary:	XGraph with animation
-Summary(pl):	XGraph z obs³ug± animacji
+Summary(pl.UTF-8):   XGraph z obsÅ‚ugÄ… animacji
 Name:		xgraph
 Version:	12.1
 Release:	2
@@ -20,11 +20,11 @@ program written by David Harrison at UC Berkeley. It does animation of
 data sets, supports zooming regions with a mouse and taking numerical
 derivatives.
 
-%description -l pl
-"XGraph z animacj±" jest modyfikacj± popularnego programu do robienia
-wykresów XGraph, napisanego przez Davida Harrisona z Uniwersytetu w
-Berkeley. Mo¿na w nim robiæ animacje zestawów danych, powiêkszaæ
-kawa³ki wykresu myszk± i numerycznie ró¿niczkowaæ dane na wykresie.
+%description -l pl.UTF-8
+"XGraph z animacjÄ…" jest modyfikacjÄ… popularnego programu do robienia
+wykresÃ³w XGraph, napisanego przez Davida Harrisona z Uniwersytetu w
+Berkeley. MoÅ¼na w nim robiÄ‡ animacje zestawÃ³w danych, powiÄ™kszaÄ‡
+kawaÅ‚ki wykresu myszkÄ… i numerycznie rÃ³Å¼niczkowaÄ‡ dane na wykresie.
 
 %prep
 %setup -q
